@@ -21,7 +21,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 
-LOG_FILE = Path(__file__).parent / 'data' / 'daily_results_log.json'
+LOG_FILE = Path(__file__).parent / 'daily_results_log.json'
 
 
 # ============================================================
