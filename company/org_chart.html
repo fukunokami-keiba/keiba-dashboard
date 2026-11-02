@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>株式会社サクシス 組織表</title>
+<style>
+  @page { size: A4 landscape; margin: 10mm 12mm; }
+  :root {
+    --ink: #1d2433; --sub: #5a6375; --line: #b9c0cc;
+    --chair: #7a1f2b; --pres: #1f3f7a; --staff: #2f6f5e; --bg: #f6f7f9;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "IPAPGothic", "IPAGothic", sans-serif; color: var(--ink); background: #fff; font-size: 10.5pt; }
+  header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--ink); padding-bottom: 4px; margin-bottom: 10px; }
+  h1 { font-size: 18pt; margin: 0; letter-spacing: .05em; }
+  header .meta { color: var(--sub); font-size: 9pt; }
+  .purpose { font-size: 10pt; margin: 0 0 10px; }
+
+  .tree { display: flex; flex-direction: column; align-items: center; }
+  .box { border-radius: 6px; padding: 7px 12px; text-align: center; color: #fff; }
+  .box .role { font-size: 13pt; font-weight: bold; letter-spacing: .1em; }
+  .box .id { font-family: monospace; font-size: 8.5pt; opacity: .85; }
+  .box .duty { font-size: 9pt; margin-top: 2px; }
+  .chair { background: var(--chair); width: 380px; }
+  .pres  { background: var(--pres);  width: 380px; }
+  .vline { width: 2px; height: 14px; background: var(--line); }
+  .vlabel { font-size: 8.5pt; color: var(--sub); margin: 1px 0; }
+  .staff-row { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; width: 100%; padding-top: 14px; }
+  .staff-row::before { content: ""; position: absolute; top: 0; left: 12.5%; right: 12.5%; border-top: 2px solid var(--line); }
+  .staff { position: relative; background: #fff; border: 2px solid var(--staff); color: var(--ink); text-align: left; padding: 7px 9px; }
+  .staff::before { content: ""; position: absolute; top: -16px; left: 50%; width: 2px; height: 14px; background: var(--line); }
+  .staff .role { color: var(--staff); font-size: 11.5pt; text-align: center; }
+  .staff .id { text-align: center; color: var(--sub); }
+  .staff ul { margin: 4px 0 0; padding-left: 1.1em; font-size: 8.8pt; line-height: 1.35; }
+  .tag { display: inline-block; font-size: 7.5pt; border: 1px solid var(--staff); color: var(--staff); border-radius: 3px; padding: 0 4px; margin-left: 4px; }
+
+  .bottom { display: grid; grid-template-columns: 1.05fr 1fr; gap: 12px; margin-top: 12px; }
+  .panel { background: var(--bg); border-radius: 6px; padding: 8px 10px; }
+  .panel h2 { font-size: 11pt; margin: 0 0 6px; border-left: 4px solid var(--pres); padding-left: 6px; }
+  .flow { display: flex; align-items: stretch; gap: 4px; font-size: 8.8pt; }
+  .step { flex: 1; background: #fff; border: 1px solid var(--line); border-radius: 4px; padding: 5px; text-align: center; }
+  .step b { display: block; font-size: 9.5pt; margin-bottom: 2px; }
+  .step.c { border-color: var(--chair); }
+  .step.c b { color: var(--chair); }
+  .arrow { align-self: center; color: var(--sub); }
+  .note { font-size: 8.5pt; color: var(--sub); margin: 6px 0 0; line-height: 1.4; }
+  table { width: 100%; border-collapse: collapse; font-size: 8.8pt; }
+  th, td { border: 1px solid var(--line); padding: 3px 5px; vertical-align: top; text-align: left; background: #fff; }
+  th { background: #e8ebf0; }
+  td.ng { color: var(--chair); }
+  footer { margin-top: 8px; font-size: 8.5pt; color: var(--sub); display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+<header>
+  <h1>株式会社サクシス　組織表</h1>
+  <div class="meta">SX指数事業部　2026年11月2日 現在</div>
+</header>
+<p class="purpose"><b>目的：</b>競馬指数サクシス（SX）を、お金を払ってもらえる品質に改善し、販売まで持っていく。<b>最終判断はすべて会長が行う。</b></p>
+
+<div class="tree">
+  <div class="box chair">
+    <div class="role">会　長</div>
+    <div class="id">オーナー本人</div>
+    <div class="duty">最終判断／改善案・販売・TARGETへの変更を承認</div>
+  </div>
+  <div class="vline"></div>
+  <div class="vlabel">▲ 提案書で上申　　▼ 決裁（承認・却下・差し戻し）</div>
+  <div class="vline"></div>
+  <div class="box pres">
+    <div class="role">社　長</div>
+    <div class="id">sx-president</div>
+    <div class="duty">社員に調査・起案を指示し、提案書にまとめて会長に上げる</div>
+  </div>
+  <div class="vline"></div>
+  <div class="staff-row">
+    <div class="box staff">
+      <div class="role">データ分析部</div>
+      <div class="id">sx-data-analyst<span class="tag">閲覧のみ</span></div>
+      <ul>
+        <li>成績ログ・TARGET・Webを調べる</li>
+        <li>弱点と強みをレース数つきで報告</li>
+        <li>データの欠損・誤りを見つける</li>
+      </ul>
+    </div>
+    <div class="box staff">
+      <div class="role">指数開発部</div>
+      <div class="id">sx-index-engineer</div>
+      <ul>
+        <li>SXの式・グレード基準の改善案（差分）と試算</li>
+        <li>会長承認後にだけ指数へ反映</li>
+        <li>提案書に無い変更は足さない</li>
+      </ul>
+    </div>
+    <div class="box staff">
+      <div class="role">検証部</div>
+      <div class="id">sx-backtest-auditor<span class="tag">閲覧のみ</span></div>
+      <ul>
+        <li>改善案を独立に検証し合否を出す</li>
+        <li>サンプル不足・過剰最適化を止める</li>
+        <li>販売ページの数字を再計算して確認</li>
+      </ul>
+    </div>
+    <div class="box staff">
+      <div class="role">商品企画部</div>
+      <div class="id">sx-sales-planner</div>
+      <ul>
+        <li>商品設計・価格案・競合調査</li>
+        <li>販売ページの下書き</li>
+        <li>誇大表現・表示ルールの確認</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="bottom">
+  <div class="panel">
+    <h2>決裁の流れ</h2>
+    <div class="flow">
+      <div class="step"><b>① 調査・試算</b>社員</div><div class="arrow">▶</div>
+      <div class="step"><b>② 提案書</b>社長がまとめる</div><div class="arrow">▶</div>
+      <div class="step c"><b>③ 決裁</b>会長</div><div class="arrow">▶</div>
+      <div class="step"><b>④ 反映</b>承認分だけ</div><div class="arrow">▶</div>
+      <div class="step"><b>⑤ 結果報告</b>社長→会長</div>
+    </div>
+    <p class="note">
+      提案書は company/proposals/ に置きます。会長は会話で「PROP-001 承認」のように伝えるだけで決裁できます。<br>
+      会長の発言がない限り、社長は決裁欄を埋めません。検証部の合格と会長の承認がそろうまで、指数は変えません。<br>
+      決裁待ち：<b>PROP-001</b>　◎の単勝オッズ欠損31件の補完と記録漏れ防止
+    </p>
+  </div>
+  <div class="panel">
+    <h2>調査の範囲</h2>
+    <table>
+      <tr><th style="width:18%">対象</th><th>自由にしてよい</th><th>会長に相談</th></tr>
+      <tr><td>インターネット</td><td>検索・閲覧（Claude in Chrome 含む）</td><td class="ng">会員登録・ログイン・購入・送信</td></tr>
+      <tr><td>PC内 TARGET</td><td>閲覧・参照・CSVの書き出し</td><td class="ng">データの追加・登録・削除・取込、設定・式の変更</td></tr>
+      <tr><td>指数・成績ログ</td><td>読む・一時的な試算</td><td class="ng">書き換え（提案書で承認後）</td></tr>
+      <tr><td>販売</td><td>企画・下書き</td><td class="ng">公開・価格決定・決済登録</td></tr>
+    </table>
+  </div>
+</div>
+
+<footer>
+  <span>呼び出し方：/sx-shacho 今週の改善会議をして　（PCでは claude --agent sx-president）</span>
+  <span>規程：company/README.md</span>
+</footer>
+</body>
+</html>
